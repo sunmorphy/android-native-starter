@@ -6,12 +6,15 @@ import com.andikas.nativestarter.core.data.source.local.preferences.AppPreferenc
 import com.andikas.nativestarter.core.data.source.remote.network.Network
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Singleton
 import kotlin.coroutines.CoroutineContext
 
 @Module
+@InstallIn(SingletonComponent::class)
 abstract class DataModule {
     @Provides
     @Singleton
